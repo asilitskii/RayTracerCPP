@@ -11,7 +11,7 @@ public:
 		ImGui::Begin("Hello");
 		ImGui::Button("Button");
 		ImGui::End();
-
+		
 		ImGui::ShowDemoWindow();
 	}
 };
@@ -19,8 +19,7 @@ public:
 Walnut::Application* Walnut::CreateApplication(int argc, char** argv)
 {
 	Walnut::ApplicationSpecification spec;
-	spec.Name = "Walnut Example";
-
+	spec.Name = "Ray Tracer";
 	Walnut::Application* app = new Walnut::Application(spec);
 	app->PushLayer<ExampleLayer>();
 	app->SetMenubarCallback([app]()
